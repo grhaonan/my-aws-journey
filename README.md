@@ -1,6 +1,6 @@
 Inspired by the [post](https://gist.github.com/ksmin23/9f797cb7a227f8476c8f1695120bb326) from colleague Sungmin Kim (Ex-AWS) 
 
-# Blogs
+## Blogs
 
 ### ML/Generative AI/Agentic AI:
 - [Enhance deployment guardrails with inference component rolling updates for Amazon SageMaker AI inference](https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/)
@@ -11,7 +11,7 @@ Inspired by the [post](https://gist.github.com/ksmin23/9f797cb7a227f8476c8f16951
 - [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime)
 
 
-# Customer quotes on AWS Services
+## Customer quotes on AWS Services
 
 I worked closely with AWS customers to advocate for AWS services and solutions. 
 
@@ -24,7 +24,7 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 - Customer TeamFomr: [Amazon Strands Agents SDK](https://strandsagents.com/latest/)
 
 
-# Internal Deep Dives & Summit Speaking:
+## Internal Deep Dives & Summit Speaking:
 
 ### ML/Generative AI/Agentic AI:
 
@@ -42,7 +42,7 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 - [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png)
 
 
-# Customer Case Studies:
+## Customer Case Studies:
 Based on the work with customers.
 
 ### ML/Generative AI/Agentic AI:
@@ -56,7 +56,7 @@ Based on the work with customers.
 - [WorkflowMax AWS Migration Case Study](https://aws.amazon.com/solutions/case-studies/workflowmax-case-study/)
 
 
-# Hands-on Workshops Builder:
+## Hands-on Workshops Builder:
 As main author or co-author
 
 
@@ -75,7 +75,7 @@ As main author or co-author
 - [Cost Effective Modern Data Platform With Athena, DBT, Iceberg, Strands SDK and MCP](https://catalog.workshops.aws/open-source-analytics-architecture)
 
 
-# Internal Toolings
+## Internal Toolings
 Contributor
 
 - [Pizza Bot](https://gitlab.aws.dev/dolivoj/pizza-bot) - Pizza Bot is AI-powered assistant that helps you complete common AWS tasks faster and more efficiently, Pizza Bot builds on the industry standard OpenAPI (REST) and Model Context Protocol (MCP) specifications to expose recipes that can be called directly or via an AI agent
