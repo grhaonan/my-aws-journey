@@ -11,6 +11,22 @@
 - [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime)
 
 
+## Customer Case Studies:
+Based on the work with customers.
+
+### ML/Generative AI/Agentic AI:
+
+- [WorkflowMax Intelligent Document Processing](/images/wfm_idp.png)
+
+- [Ingenious AI Amazon Nova LLM Case Study](https://aws.amazon.com/pt/solutions/case-studies/ingenious-ai-nova-case-study)
+
+- [CrystalDelta Amazon Nova LLM Case Study](https://crystaldelta.com/amazon-nova-ai-models-sydney/)
+
+### Migration
+
+- [WorkflowMax AWS Migration Case Study](https://aws.amazon.com/solutions/case-studies/workflowmax-case-study/)
+
+
 ## Customer quotes on AWS Services
 
 I worked closely with AWS customers to advocate for AWS services and solutions. 
@@ -41,19 +57,6 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 
 - [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png)
 
-
-## Customer Case Studies:
-Based on the work with customers.
-
-### ML/Generative AI/Agentic AI:
-
-- [Ingenious AI Amazon Nova LLM Case Study](https://aws.amazon.com/pt/solutions/case-studies/ingenious-ai-nova-case-study)
-
-- [CrystalDelta Amazon Nova LLM Case Study](https://crystaldelta.com/amazon-nova-ai-models-sydney/)
-
-### Migration
-
-- [WorkflowMax AWS Migration Case Study](https://aws.amazon.com/solutions/case-studies/workflowmax-case-study/)
 
 
 ## Hands-on Workshops Builder:
