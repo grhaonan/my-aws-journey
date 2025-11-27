@@ -78,7 +78,10 @@ As main author or co-author
 - [Cost Effective Modern Data Platform With Athena, DBT, Iceberg, Strands SDK and MCP](https://catalog.workshops.aws/open-source-analytics-architecture)
 
 
-## Internal Toolings
+## Internal Toolings/Demos
 Contributor
 
 - [Pizza Bot](https://gitlab.aws.dev/dolivoj/pizza-bot) - Pizza Bot is AI-powered assistant that helps you complete common AWS tasks faster and more efficiently, Pizza Bot builds on the industry standard OpenAPI (REST) and Model Context Protocol (MCP) specifications to expose recipes that can be called directly or via an AI agent
+
+- [Inferencing DeepSeek-R1-Distill-LLama-8B on Trainum2 and vLLM](https://broadcast.amazon.com/videos/1416629)
+  
