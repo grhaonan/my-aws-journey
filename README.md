@@ -1,6 +1,8 @@
 ## Blogs
 
 ### ML/Generative AI/Agentic AI:
+
+- [Generative AI Lifecycle Operational Excellence framework on AWS](https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html) - co-author
 - [Enhance deployment guardrails with inference component rolling updates for Amazon SageMaker AI inference](https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/)
 
 - [Scaling Agentic Coding Tools Like Claude Code Across Your Organization: What We Learned from CTOs in the Field](https://builder.aws.com/content/35hACaxZKaIWCo2VCgt2fP7JOR4/scaling-agentic-coding-tools-like-claude-code-across-your-organization-what-we-learned-from-ctos-in-the-field)
