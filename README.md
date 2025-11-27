@@ -1,4 +1,4 @@
-## Blogs
+## AWS Blogs/Prescriptive Guidance
 
 ### ML/Generative AI/Agentic AI:
 
