@@ -1,5 +1,3 @@
-Inspired by the [post](https://gist.github.com/ksmin23/9f797cb7a227f8476c8f1695120bb326) from colleague Sungmin Kim (Ex-AWS) 
-
 ## Blogs
 
 ### ML/Generative AI/Agentic AI:
