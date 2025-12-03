@@ -22,7 +22,7 @@ Based on the work with customers.
 
 - [CrystalDelta Amazon Nova LLM Case Study](https://crystaldelta.com/amazon-nova-ai-models-sydney/)
 
-- [inGeniousAI RIV Keynote Highlight](ingenious_ai_nova.jpeg)
+- [inGeniousAI reinvent 2025 Keynote Highlight](/images/ingenious_ai_nova.jpeg)
 
 ### Migration
 
