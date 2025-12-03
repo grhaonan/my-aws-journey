@@ -22,6 +22,8 @@ Based on the work with customers.
 
 - [CrystalDelta Amazon Nova LLM Case Study](https://crystaldelta.com/amazon-nova-ai-models-sydney/)
 
+- [inGeniousAI RIV Keynote Highlight](ingenious_ai_nova.jpeg)
+
 ### Migration
 
 - [WorkflowMax AWS Migration Case Study](https://aws.amazon.com/solutions/case-studies/workflowmax-case-study/)
