@@ -1,5 +1,8 @@
-## AWS Blogs/Prescriptive Guidance
+## Award 
 
+- 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions via the whole year 2025
+
+## AWS Blogs/Prescriptive Guidance
 ### ML/Generative AI/Agentic AI:
 
 - [Generative AI Lifecycle Operational Excellence framework on AWS](https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html) - co-author
