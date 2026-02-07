@@ -75,6 +75,8 @@ As main author or co-author
 
 ### ML/Generative AI/Agentic AI:
 
+- [Agentic AI with Claude Agent SDK and Amazon Bedrock AgentCore](https://studio.us-east-1.prod.workshops.aws/preview/2ab3895e-8b7c-4f5c-b0c7-8597d6954290/builds/5471a922-0ec0-418f-9119-5768ec436267)
+
 - [Supercharge your development with Claude Code on Amazon Bedrock](https://catalog.workshops.aws/claude-code-on-amazon-bedrock)
 
 - [GenAI Ops with Langfuse](https://catalog.workshops.aws/genaiops-langfuse)
