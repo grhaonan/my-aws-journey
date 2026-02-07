@@ -1,0 +1,116 @@
+/* === Shared Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* === CSS Custom Properties === */
+:root {
+  /* AWS-inspired palette */
+  --aws-navy: #232F3E;
+  --aws-dark: #161E2D;
+  --aws-orange: #FF9900;
+  --aws-orange-hover: #EC7211;
+  --aws-light: #F2F3F3;
+  --aws-white: #FFFFFF;
+
+  /* Category colors */
+  --color-award: #EAB308;
+  --color-blogs: #3B82F6;
+  --color-speaking: #8B5CF6;
+  --color-customers: #10B981;
+  --color-quotes: #06B6D4;
+  --color-workshops: #F59E0B;
+  --color-tools: #EF4444;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+}
+
+/* === Internal Link Badge === */
+.internal-link::after {
+  content: '\1F512';
+  font-size: 0.7em;
+  margin-left: 4px;
+  vertical-align: super;
+  opacity: 0.6;
+}
+
+/* === Lightbox === */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  padding: 2rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Version Switcher === */
+.version-switcher {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: var(--aws-navy);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.version-switcher:hover {
+  background: var(--aws-orange);
+  color: var(--aws-dark);
+  transform: translateY(-2px);
+}
