@@ -11,7 +11,7 @@
 - [Scaling Agentic Coding Tools Like Claude Code Across Your Organization: What We Learned from CTOs in the Field](https://builder.aws.com/content/35hACaxZKaIWCo2VCgt2fP7JOR4/scaling-agentic-coding-tools-like-claude-code-across-your-organization-what-we-learned-from-ctos-in-the-field) first-author
 
 
-- [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime)
+- [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime) first-author
 
 
 ## Internal Deep Dives & Summit Speaking & Hackathon:
