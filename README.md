@@ -19,7 +19,7 @@
 
 ### 2025 OneANZ Agentic Hackathon
 
--[Multi-agent powerd property buyer agency](/images/landchecker_hackathon_final.jpg)
+- [Multi-agent powerd property buyer agency](/images/landchecker_hackathon_final.jpg)
 
 ### ML/Generative AI/Agentic AI:
 
