@@ -46,15 +46,15 @@ Based on the work with customers.
 
 - [WorkflowMax Intelligent Document Processing](/images/wfm_idp.png)
 
-- [Ingenious AI Amazon Nova LLM Case Study](https://aws.amazon.com/pt/solutions/case-studies/ingenious-ai-nova-case-study)
+- [Ingenious AI Amazon Nova LLM Case Study](/images/ingenious_ai_nova_case_study.png)
 
-- [CrystalDelta Amazon Nova LLM Case Study](https://crystaldelta.com/amazon-nova-ai-models-sydney/)
+- [CrystalDelta Amazon Nova LLM Case Study](/images/crystal_delta_nova_case_study.png)
 
 - [inGeniousAI reinvent 2025 Keynote Highlight](/images/ingenious_ai_nova.jpeg)
 
 ### Migration
 
-- [WorkflowMax AWS Migration Case Study](https://aws.amazon.com/solutions/case-studies/workflowmax-case-study/)
+- [WorkflowMax AWS Migration Case Study](/images/wfm_migration_case_study.png)
 
 
 ## Customer quotes on AWS Services
@@ -65,14 +65,9 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 
 - Customer Fortiro: [Unlock cost savings with the new scale down to zero feature in SageMaker Inference](https://aws.amazon.com/blogs/machine-learning/unlock-cost-savings-with-the-new-scale-down-to-zero-feature-in-amazon-sagemaker-inference/)
 
-- Customer Landchecker: [Amazon Strands Agents SDK](https://strandsagents.com/latest/)
+- Customer Landchecker: [Amazon Strands Agents SDK](/images/landchecker_strands_testimoni.png)
 
-- Customer TeamFomr: [Amazon Strands Agents SDK](https://strandsagents.com/latest/)
-
-
-
-
-
+- Customer TeamFomr: [Amazon Strands Agents SDK](/images/teamform_strands_testimoni.png)
 
 ## Hands-on Workshops Builder:
 As main author or co-author
