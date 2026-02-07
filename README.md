@@ -1,6 +1,6 @@
 ## Award 
 
-- 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions via the whole year 2025
+- 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions in 2025
 
 ## AWS Blogs/Prescriptive Guidance
 ### ML/Generative AI/Agentic AI:
