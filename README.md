@@ -5,10 +5,10 @@
 ## AWS Blogs/Prescriptive Guidance
 ### ML/Generative AI/Agentic AI:
 - [Democratizing business intelligence: BGL’s journey with Claude Agent SDK and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/democratizing-business-intelligence-bgls-journey-with-claude-agent-sdk-and-amazon-bedrock-agentcore/) first-author
-- [Generative AI Lifecycle Operational Excellence framework on AWS](https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html) - co-author
-- [Enhance deployment guardrails with inference component rolling updates for Amazon SageMaker AI inference](https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/)
+- [Generative AI Lifecycle Operational Excellence framework on AWS](https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html) co-author
+- [Enhance deployment guardrails with inference component rolling updates for Amazon SageMaker AI inference](https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/) co-author
 
-- [Scaling Agentic Coding Tools Like Claude Code Across Your Organization: What We Learned from CTOs in the Field](https://builder.aws.com/content/35hACaxZKaIWCo2VCgt2fP7JOR4/scaling-agentic-coding-tools-like-claude-code-across-your-organization-what-we-learned-from-ctos-in-the-field)
+- [Scaling Agentic Coding Tools Like Claude Code Across Your Organization: What We Learned from CTOs in the Field](https://builder.aws.com/content/35hACaxZKaIWCo2VCgt2fP7JOR4/scaling-agentic-coding-tools-like-claude-code-across-your-organization-what-we-learned-from-ctos-in-the-field) first-author
 
 
 - [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime)
@@ -23,7 +23,7 @@
 
 ### ML/Generative AI/Agentic AI:
 
-- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)
+- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)  - AWS joint customer solution
 
 - [Observability for GenAI Applications with Amazon Bedrock and Langfuse](/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png) - AWS Global Technicla Field Community (TFC) Annual Summit, Seattle, WA, USA, April 2025
 
