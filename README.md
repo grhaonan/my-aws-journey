@@ -14,6 +14,31 @@
 - [Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime](https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime)
 
 
+## Internal Deep Dives & Summit Speaking & Hackathon:
+
+
+### 2025 OneANZ Agentic Hackathon
+
+-[Multi-agent powerd property buyer agency](/images/landchecker_hackathon_final.jpg)
+
+### ML/Generative AI/Agentic AI:
+
+- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)
+
+- [Observability for GenAI Applications with Amazon Bedrock and Langfuse](/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png) - AWS Global Technicla Field Community (TFC) Annual Summit, Seattle, WA, USA, April 2025
+
+- [AWS Tech Summit Sydney 2025 - GenAIOps with Langfuse](/images/genai_ops_aws_tech_summit_sydney.png)
+
+- [AWS Sydney Summit 2025 - Scaling Generative AI in Production with Amazon Nova](/images/scaling_generative_ai_in_production_with_amazon_nova.png) - With customer inGenious AI, AWS Sydney Summit is the latest public event in the ANZ
+
+
+### Data Analytics:
+
+- [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png)
+
+
+
+
 ## Customer Case Studies:
 Based on the work with customers.
 
@@ -45,22 +70,7 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 - Customer TeamFomr: [Amazon Strands Agents SDK](https://strandsagents.com/latest/)
 
 
-## Internal Deep Dives & Summit Speaking:
 
-### ML/Generative AI/Agentic AI:
-
-- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)
-
-- [Observability for GenAI Applications with Amazon Bedrock and Langfuse](/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png) - AWS Global Technicla Field Community (TFC) Annual Summit, Seattle, WA, USA, April 2025
-
-- [AWS Tech Summit Sydney 2025 - GenAIOps with Langfuse](/images/genai_ops_aws_tech_summit_sydney.png)
-
-- [AWS Sydney Summit 2025 - Scaling Generative AI in Production with Amazon Nova](/images/scaling_generative_ai_in_production_with_amazon_nova.png) - With customer inGenious AI, AWS Sydney Summit is the latest public event in the ANZ
-
-
-### Data Analytics:
-
-- [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png)
 
 
 
