@@ -1,327 +1,851 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dustin Liu's AWS Journey - Body of Work (Bento)</title>
-  <meta name="description" content="AWS Solutions Architect Body of Work - Blogs, Speaking, Customer Case Studies, Workshops and more.">
-  <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/bento.css">
-  <link rel="stylesheet" href="css/bento-v2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dustin Liu | AWS AI/ML Journey</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: rgba(30, 34, 45, 0.6);
+            --card-hover: rgba(40, 44, 55, 0.8);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --accent-aws: #FF9900;
+            --accent-ai: #8b5cf6; /* Violet for AI */
+            --accent-data: #3b82f6; /* Blue for Data */
+            --accent-green: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08), transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 153, 0, 0.05), transparent 40%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        /* --- Header & Hero --- */
+        header {
+            padding: 6rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 153, 0, 0.1);
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            color: var(--accent-aws);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 0.02em;
+            box-shadow: 0 0 20px rgba(255, 153, 0, 0.1);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(180deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        /* --- Navigation --- */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 4rem;
+            position: sticky;
+            top: 1.5rem;
+            z-index: 100;
+            padding: 0 1rem;
+        }
+
+        .nav-bg {
+            background: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 0.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--card-border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+
+        .nav-pill {
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.25s ease;
+        }
+
+        .nav-pill:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-pill:focus {
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        /* --- Stats Grid (Bento) --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            max-width: 1000px;
+            margin: 0 auto 5rem;
+            padding: 0 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        /* --- Main Content Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 140px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .section-icon {
+            margin-right: 1rem;
+            color: var(--accent-aws);
+            font-size: 1.25rem;
+            background: rgba(255, 153, 0, 0.1);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .section-icon.ai { color: var(--accent-ai); background: rgba(139, 92, 246, 0.1); }
+        .section-icon.data { color: var(--accent-data); background: rgba(59, 130, 246, 0.1); }
+        .section-icon.code { color: var(--accent-green); background: rgba(16, 185, 129, 0.1); }
+
+        /* --- Cards --- */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            /* align-items: start; Removed to allow cards to stretch to equal height */
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.01);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            background: var(--card-hover);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .tag.ai { background: rgba(139, 92, 246, 0.1); color: #c4b5fd; border-color: rgba(139, 92, 246, 0.2); }
+        .tag.data { background: rgba(59, 130, 246, 0.1); color: #93c5fd; border-color: rgba(59, 130, 246, 0.2); }
+        .tag.aws { background: rgba(255, 153, 0, 0.1); color: #fdba74; border-color: rgba(255, 153, 0, 0.2); }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .card h3 a {
+            color: var(--text-primary);
+        }
+        
+        .card h3 a:hover {
+            color: var(--accent-aws);
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            margin-top: auto;
+            padding-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-meta i {
+            color: var(--accent-aws);
+        }
+
+        .card-image-container {
+            margin-top: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            background: #000; /* Dark background for letterboxing */
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Enforce 16:9 aspect ratio */
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: contain; /* Show full image without cropping */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            background: rgba(15, 17, 21, 0.5);
+        }
+        
+        footer a {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: var(--accent-aws);
+        }
+        
+        footer i {
+            margin-left: 0.5rem;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3748;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5568;
+        }
+
+        /* --- Mobile Tweaks --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .nav-container { top: 1rem; }
+            .nav-bg { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; max-width: 100%; }
+            .nav-pill { white-space: nowrap; }
+            /* Hide scrollbar on mobile nav */
+            .nav-bg::-webkit-scrollbar { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Hero Header -->
-  <header class="bento-header">
-    <div class="award-badge">2025 AWS AI/ML TFC Gold Member</div>
-    <h1>Dustin Liu's AWS Journey</h1>
-    <p class="subtitle">A collection of blogs, talks, customer stories, workshops, and tools from my work as an AWS Solutions Architect since May,2024</p>
-  </header>
+    <header>
+        <div class="hero-badge">
+            <i class="fa-solid fa-award"></i> 
+            <span>2025 AWS AI/ML TFC Gold Member</span>
+        </div>
+        <h1>Dustin Liu's <br> AWS Journey</h1>
+        <p class="subtitle">A collection of blogs, talks, customer stories, workshops, and tools from my work as an AWS Solutions Architect since May 2024.</p>
+    </header>
 
-  <!-- Filter Nav -->
-  <nav class="filter-nav">
-    <a href="#blogs" class="filter-pill" data-cat="blogs"><span class="dot"></span>Blogs</a>
-    <a href="#speaking" class="filter-pill" data-cat="speaking"><span class="dot"></span>Speaking</a>
-    <a href="#case-studies" class="filter-pill" data-cat="customers"><span class="dot"></span>Case Studies</a>
-    <a href="#quotes" class="filter-pill" data-cat="quotes"><span class="dot"></span>Quotes</a>
-    <a href="#workshops" class="filter-pill" data-cat="workshops"><span class="dot"></span>Workshops</a>
-    <a href="#tools" class="filter-pill" data-cat="tools"><span class="dot"></span>Toolings</a>
-  </nav>
-
-  <div class="bento-container">
-
-    <!-- Stats -->
-    <div class="stats-row animate-on-scroll">
-      <div class="stat-card">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-label">Published Blogs</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" data-target="6">0</div>
-        <div class="stat-label">Talks & Events</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-label">Case Studies</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-label">Workshops</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" data-target="3">0</div>
-        <div class="stat-label">Customer Quotes</div>
-      </div>
+    <div class="nav-container">
+        <div class="nav-bg">
+            <a href="#blogs" class="nav-pill">Blogs</a>
+            <a href="#speaking" class="nav-pill">Speaking</a>
+            <a href="#case-studies" class="nav-pill">Case Studies</a>
+            <a href="#quotes" class="nav-pill">Quotes</a>
+            <a href="#workshops" class="nav-pill">Workshops</a>
+            <a href="#tools" class="nav-pill">Tools</a>
+        </div>
     </div>
 
-    <!-- Blogs Section -->
-    <div id="blogs">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-blogs)"></span>AWS Blogs & Prescriptive Guidance</h2>
-      <div class="bento-grid">
-
-        <div class="bento-card animate-on-scroll" data-category="blogs">
-          <time class="card-date">Jan 2026</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://aws.amazon.com/blogs/machine-learning/democratizing-business-intelligence-bgls-journey-with-claude-agent-sdk-and-amazon-bedrock-agentcore/" target="_blank" rel="noopener">Democratizing Business Intelligence: BGL's Journey with Claude Agent SDK and Amazon Bedrock AgentCore</a></h3>
-          <span class="card-tag first-author">First Author</span>
+    <!-- Bento Grid Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Published Blogs</span>
         </div>
-
-        <div class="bento-card animate-on-scroll" data-category="blogs">
-          <time class="card-date">Nov 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html" target="_blank" rel="noopener">Generative AI Lifecycle Operational Excellence Framework on AWS</a></h3>
-          <span class="card-tag co-author">Co-Author</span>
+        <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Talks & Events</span>
         </div>
-
-        <div class="bento-card animate-on-scroll" data-category="blogs">
-          <time class="card-date">Mar 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/" target="_blank" rel="noopener">Enhance Deployment Guardrails with Inference Component Rolling Updates for Amazon SageMaker AI Inference</a></h3>
-          <span class="card-tag co-author">Co-Author</span>
+        <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Case Studies</span>
         </div>
-
-        <div class="bento-card animate-on-scroll" data-category="blogs">
-          <time class="card-date">Nov 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://builder.aws.com/content/35hACaxZKaIWCo2VCgt2fP7JOR4/scaling-agentic-coding-tools-like-claude-code-across-your-organization-what-we-learned-from-ctos-in-the-field" target="_blank" rel="noopener" class="internal-link" title="Internal - requires AWS access">Scaling Agentic Coding Tools Like Claude Code Across Your Organization</a></h3>
-          <span class="card-tag first-author">First Author</span>
+        <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Workshops</span>
         </div>
-
-        <div class="bento-card animate-on-scroll" data-category="blogs">
-          <time class="card-date">Nov 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://builder.aws.com/content/30O5JJPjEeCugL5MAfSM9TTcd9p/deploying-claude-agent-sdk-on-amazon-bedrock-agentcore-runtime" target="_blank" rel="noopener" class="internal-link" title="Internal - requires AWS access">Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime</a></h3>
-          <span class="card-tag first-author">First Author</span>
+        <div class="stat-card">
+            <span class="stat-number" data-target="0">0</span>
+            <span class="stat-label">Customer Quotes</span>
         </div>
-
-      </div>
     </div>
 
-    <!-- Speaking Section -->
-    <div id="speaking">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-speaking)"></span>Deep Dives, Summit Speaking & Hackathon</h2>
-      <div class="bento-grid no-featured">
+    <div class="container">
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Sep 2025</time>
-          <div class="card-category">2025 OneANZ Agentic Hackathon</div>
-          <h3>Multi-Agent Powered Property Buyer Agency</h3>
-          <span class="card-tag hackathon">Hackathon</span>
-          <img src="images/landchecker_hackathon_final.jpg" alt="OneANZ Agentic Hackathon" loading="lazy" class="lightbox-trigger">
-        </div>
+        <!-- Blogs Section -->
+        <section id="blogs">
+            <div class="section-header">
+                <div class="section-icon ai"><i class="fa-solid fa-pen-nib"></i></div>
+                <h2>AWS Blogs & Prescriptive Guidance</h2>
+            </div>
+            <div class="grid-layout">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jan 2026</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag ai">GenAI</span>
+                        <span class="tag ai">Agentic AI</span>
+                    </div>
+                    <h3><a href="https://aws.amazon.com/blogs/machine-learning/democratizing-business-intelligence-bgls-journey-with-claude-agent-sdk-and-amazon-bedrock-agentcore/" target="_blank">Democratizing Business Intelligence: BGL's Journey with Claude Agent SDK</a></h3>
+                    <div class="card-meta"><i class="fa-regular fa-user"></i> First Author</div>
+                </article>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Nov 2024</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Video Q&A with Amazon Bedrock and Marqo AI</h3>
-          <span class="card-tag joint-solution">AWS Joint Customer Solution</span>
-          <img src="images/video_qa_with_amazon_bedrock_and_marqo_ai.png" alt="Video Q&A with Amazon Bedrock and Marqo AI" loading="lazy" class="lightbox-trigger">
-        </div>
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Nov 2025</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag ai">GenAI</span>
+                        <span class="tag ai">Ops</span>
+                    </div>
+                    <h3><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/introduction.html" target="_blank">Generative AI Lifecycle Operational Excellence Framework on AWS</a></h3>
+                    <div class="card-meta"><i class="fa-solid fa-users"></i> Co-Author</div>
+                </article>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Apr 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Observability for GenAI Applications with Amazon Bedrock and Langfuse</h3>
-          <div class="card-meta">AWS Global TFC Annual Summit, Seattle, WA, USA</div>
-          <span class="card-tag summit">TFC Summit</span>
-          <img src="images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png" alt="Observability for GenAI Applications" loading="lazy" class="lightbox-trigger">
-        </div>
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Mar 2025</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag ai">SageMaker</span>
+                    </div>
+                    <h3><a href="https://aws.amazon.com/blogs/machine-learning/enhance-deployment-guardrails-with-inference-component-rolling-updates-for-amazon-sagemaker-ai-inference/" target="_blank">Enhance Deployment Guardrails for Amazon SageMaker AI Inference</a></h3>
+                    <div class="card-meta"><i class="fa-solid fa-users"></i> Co-Author</div>
+                </article>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Sep 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>GenAIOps with Langfuse</h3>
-          <div class="card-meta">AWS Tech Summit Sydney 2025</div>
-          <span class="card-tag summit">Tech Summit</span>
-          <img src="images/genai_ops_aws_tech_summit_sydney.png" alt="GenAIOps with Langfuse" loading="lazy" class="lightbox-trigger">
-        </div>
+                 <!-- Card 4 -->
+                 <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Nov 2025</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag ai">Agentic AI</span>
+                        <span class="tag aws">Internal</span>
+                    </div>
+                    <h3><a href="#">Scaling Agentic Coding Tools Like Claude Code Across Your Organization</a></h3>
+                    <div class="card-meta"><i class="fa-solid fa-lock"></i> Internal - First Author</div>
+                </article>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Jun 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Scaling Generative AI in Production with Amazon Nova</h3>
-          <div class="card-meta">AWS Sydney Summit 2025 - With customer inGenious AI</div>
-          <span class="card-tag summit">Sydney Summit</span>
-          <img src="images/scaling_generative_ai_in_production_with_amazon_nova.png" alt="Scaling Generative AI in Production" loading="lazy" class="lightbox-trigger">
-        </div>
+                <!-- Card 5 -->
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Nov 2025</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag ai">Bedrock</span>
+                        <span class="tag aws">Internal</span>
+                    </div>
+                    <h3><a href="#">Deploying Claude Agent SDK on Amazon Bedrock AgentCore Runtime</a></h3>
+                    <div class="card-meta"><i class="fa-solid fa-lock"></i> Internal - First Author</div>
+                </article>
+            </div>
+        </section>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="speaking">
-          <time class="card-date">Sep 2025</time>
-          <div class="card-category">Data Analytics</div>
-          <h3>Frugal Data Foundation for AI with Athena, DBT and Iceberg</h3>
-          <div class="card-meta">AWS Tech Summit Sydney 2025</div>
-          <span class="card-tag summit">Tech Summit</span>
-          <img src="images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt.png" alt="Frugal Data Foundation for AI" loading="lazy" class="lightbox-trigger">
-        </div>
+        <!-- Speaking Section -->
+        <section id="speaking">
+            <div class="section-header">
+                <div class="section-icon data"><i class="fa-solid fa-microphone-lines"></i></div>
+                <h2>Deep Dives, Speaking & Hackathons</h2>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Sep 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag aws">Hackathon</span></div>
+                    <h3>Multi-Agent Powered Property Buyer Agency</h3>
+                    <div class="card-meta">2025 OneANZ Agentic Hackathon</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/landchecker_hackathon_final.jpg" alt="Hackathon" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
 
-      </div>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Nov 2024</span>
+                    </div>
+                    <div class="card-tags"><span class="tag ai">Bedrock</span><span class="tag">Marqo AI</span></div>
+                    <h3>Video Q&A with Amazon Bedrock and Marqo AI</h3>
+                    <div class="card-meta">AWS Joint Customer Solution</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/video_qa_with_amazon_bedrock_and_marqo_ai.png" alt="Video QA" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Apr 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag">Summit</span><span class="tag">TFC</span></div>
+                    <h3>Observability for GenAI Applications with Amazon Bedrock</h3>
+                    <div class="card-meta">AWS Global TFC Annual Summit, Seattle</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png" alt="Summit" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Sep 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag">Tech Summit</span></div>
+                    <h3>GenAIOps with Langfuse</h3>
+                    <div class="card-meta">AWS Tech Summit Sydney 2025</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/genai_ops_aws_tech_summit_sydney.png" alt="Summit" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jun 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag">Sydney Summit</span><span class="tag ai">Amazon Nova</span></div>
+                    <h3>Scaling Generative AI in Production with Amazon Nova</h3>
+                    <div class="card-meta">With customer inGenious AI</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/scaling_generative_ai_in_production_with_amazon_nova.png" alt="Scaling Generative AI" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Sep 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag data">Data</span><span class="tag">Iceberg</span></div>
+                    <h3>Frugal Data Foundation for AI with Athena, DBT and Iceberg</h3>
+                    <div class="card-meta">AWS Tech Summit Sydney 2025</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt.png" alt="Data" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies">
+            <div class="section-header">
+                <div class="section-icon ai"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Customer Case Studies</h2>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Aug 2025</span>
+                    </div>
+                    <h3>WorkflowMax Intelligent Document Processing</h3>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/wfm_idp.png" alt="WorkflowMax" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Mar 2025</span>
+                    </div>
+                    <h3>Ingenious AI Amazon Nova LLM Case Study</h3>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/ingenious_ai_nova_case_study.png" alt="Ingenious AI" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Mar 2025</span>
+                    </div>
+                    <h3>CrystalDelta Amazon Nova LLM Case Study</h3>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/crystal_delta_nova_case_study.png" alt="CrystalDelta" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Dec 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag">Keynote</span></div>
+                    <h3>inGeniousAI re:Invent 2025 Keynote Highlight</h3>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/ingenious_ai_nova.jpeg" alt="Keynote" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                 <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jul 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag">Migration</span></div>
+                    <h3>WorkflowMax AWS Migration Case Study</h3>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/wfm_migration_case_study.png" alt="Migration" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section id="quotes">
+            <div class="section-header">
+                <div class="section-icon ai"><i class="fa-solid fa-quote-left"></i></div>
+                <h2>Customer Quotes</h2>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Dec 2024</span>
+                    </div>
+                    <h3><a href="https://aws.amazon.com/blogs/machine-learning/unlock-cost-savings-with-the-new-scale-down-to-zero-feature-in-amazon-sagemaker-inference/" target="_blank">Unlock Cost Savings with Scale Down to Zero in SageMaker</a></h3>
+                    <div class="card-meta">Customer: Fortiro</div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jan 2026</span>
+                    </div>
+                    <h3>Amazon Strands Agents SDK</h3>
+                    <div class="card-meta">Customer: Landchecker</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/landchecker_strands_testimoni.png" alt="Testimonial" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Nov 2025</span>
+                    </div>
+                    <h3>Amazon Strands Agents SDK</h3>
+                    <div class="card-meta">Customer: TeamForm</div>
+                    <div class="card-image-container">
+                        <img src="https://raw.githubusercontent.com/grhaonan/my-aws-journey/main/images/teamform_strands_testimoni.png" alt="Testimonial" class="card-image" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Workshops Section -->
+        <section id="workshops">
+            <div class="section-header">
+                <div class="section-icon code"><i class="fa-solid fa-laptop-code"></i></div>
+                <h2>Hands-on Workshops</h2>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jan 2026</span>
+                    </div>
+                    <div class="card-tags"><span class="tag ai">GenAI</span></div>
+                    <h3><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/2ab3895e-8b7c-4f5c-b0c7-8597d6954290" target="_blank">Agentic AI with Claude Agent SDK</a></h3>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Sep 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag ai">Claude Code</span></div>
+                    <h3><a href="https://catalog.workshops.aws/claude-code-on-amazon-bedrock" target="_blank">Supercharge Your Development with Claude Code on Amazon Bedrock</a></h3>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Feb 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag ai">Ops</span></div>
+                    <h3><a href="https://catalog.workshops.aws/genaiops-langfuse" target="_blank">GenAI Ops with Langfuse</a></h3>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Sep 2024</span>
+                    </div>
+                    <div class="card-tags"><span class="tag data">Snowflake</span></div>
+                    <h3><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/b157ba93-af71-43f5-8230-eff4a6b26719" target="_blank">Better Together: Snowflake + AWS for Analytics and GenAI Workload</a></h3>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Jan 2025</span>
+                    </div>
+                    <div class="card-tags"><span class="tag data">Data</span></div>
+                    <h3><a href="https://catalog.workshops.aws/open-source-analytics-architecture" target="_blank">Cost Effective Modern Data Platform with Athena, DBT, Iceberg, Strands SDK and MCP</a></h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools">
+            <div class="section-header">
+                <div class="section-icon code"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h2>Internal Tooling & Demos</h2>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Apr 2025</span>
+                    </div>
+                    <h3>Pizza Bot (MCP)</h3>
+                    <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">AI-powered assistant built on OpenAPI and Model Context Protocol.</p>
+                    <div class="card-meta"><i class="fa-solid fa-code-branch"></i> Contributor</div>
+                </article>
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-date">Feb 2025</span>
+                    </div>
+                    <h3>Inferencing DeepSeek-R1 on Trainium2</h3>
+                    <div class="card-meta"><i class="fa-solid fa-code-branch"></i> Contributor</div>
+                </article>
+            </div>
+        </section>
+
     </div>
 
-    <!-- Customer Case Studies -->
-    <div id="case-studies">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-customers)"></span>Customer Case Studies</h2>
-      <div class="bento-grid">
+    <footer>
+        <p>Built with passion for cloud — <a href="https://github.com/grhaonan/my-aws-journey" target="_blank">View on GitHub <i class="fa-brands fa-github"></i></a></p>
+    </footer>
 
-        <div class="bento-card has-image animate-on-scroll" data-category="customers">
-          <time class="card-date">Aug 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>WorkflowMax Intelligent Document Processing</h3>
-          <img src="images/wfm_idp.png" alt="WorkflowMax IDP" loading="lazy" class="lightbox-trigger">
-        </div>
-
-        <div class="bento-card has-image animate-on-scroll" data-category="customers">
-          <time class="card-date">Mar 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Ingenious AI Amazon Nova LLM Case Study</h3>
-          <img src="images/ingenious_ai_nova_case_study.png" alt="Ingenious AI Amazon Nova LLM Case Study" loading="lazy" class="lightbox-trigger">
-        </div>
-
-        <div class="bento-card has-image animate-on-scroll" data-category="customers">
-          <time class="card-date">Mar 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>CrystalDelta Amazon Nova LLM Case Study</h3>
-          <img src="images/crystal_delta_nova_case_study.png" alt="CrystalDelta Amazon Nova LLM Case Study" loading="lazy" class="lightbox-trigger">
-        </div>
-
-        <div class="bento-card has-image animate-on-scroll" data-category="customers">
-          <time class="card-date">Dec 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>inGeniousAI re:Invent 2025 Keynote Highlight</h3>
-          <span class="card-tag keynote">Keynote</span>
-          <img src="images/ingenious_ai_nova.jpeg" alt="inGeniousAI re:Invent Keynote" loading="lazy" class="lightbox-trigger">
-        </div>
-
-        <div class="bento-card has-image animate-on-scroll" data-category="customers">
-          <time class="card-date">Jul 2025</time>
-          <div class="card-category">Migration</div>
-          <h3>WorkflowMax AWS Migration Case Study</h3>
-          <img src="images/wfm_migration_case_study.png" alt="WorkflowMax AWS Migration Case Study" loading="lazy" class="lightbox-trigger">
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Customer Quotes -->
-    <div id="quotes">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-quotes)"></span>Customer Quotes on AWS Services</h2>
-      <div class="bento-grid no-featured">
-
-        <div class="bento-card quote-card animate-on-scroll" data-category="quotes">
-          <time class="card-date">Dec 2024</time>
-          <div class="quote-mark">&ldquo;</div>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://aws.amazon.com/blogs/machine-learning/unlock-cost-savings-with-the-new-scale-down-to-zero-feature-in-amazon-sagemaker-inference/" target="_blank" rel="noopener">Unlock Cost Savings with the New Scale Down to Zero Feature in SageMaker Inference</a></h3>
-          <div class="customer-name">Customer: Fortiro</div>
-        </div>
-
-        <div class="bento-card quote-card has-image animate-on-scroll" data-category="quotes">
-          <time class="card-date">Jan 2026</time>
-          <div class="quote-mark">&ldquo;</div>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Amazon Strands Agents SDK</h3>
-          <div class="customer-name">Customer: Landchecker</div>
-          <img src="images/landchecker_strands_testimoni.png" alt="Landchecker Strands Agents SDK testimonial" loading="lazy" class="lightbox-trigger">
-        </div>
-
-        <div class="bento-card quote-card has-image animate-on-scroll" data-category="quotes">
-          <time class="card-date">Nov 2025</time>
-          <div class="quote-mark">&ldquo;</div>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3>Amazon Strands Agents SDK</h3>
-          <div class="customer-name">Customer: TeamForm</div>
-          <img src="images/teamform_strands_testimoni.png" alt="TeamForm Strands Agents SDK testimonial" loading="lazy" class="lightbox-trigger">
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Workshops -->
-    <div id="workshops">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-workshops)"></span>Hands-on Workshops</h2>
-      <div class="bento-grid">
-
-        <div class="bento-card animate-on-scroll" data-category="workshops">
-          <time class="card-date">Jan 2026</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/2ab3895e-8b7c-4f5c-b0c7-8597d6954290" target="_blank" rel="noopener">Agentic AI with Claude Agent SDK and Amazon Bedrock AgentCore</a></h3>
-        </div>
-
-        <div class="bento-card animate-on-scroll" data-category="workshops">
-          <time class="card-date">Sep 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://catalog.workshops.aws/claude-code-on-amazon-bedrock" target="_blank" rel="noopener">Supercharge Your Development with Claude Code on Amazon Bedrock</a></h3>
-        </div>
-
-        <div class="bento-card animate-on-scroll" data-category="workshops">
-          <time class="card-date">Feb 2025</time>
-          <div class="card-category">ML / Generative AI / Agentic AI</div>
-          <h3><a href="https://catalog.workshops.aws/genaiops-langfuse" target="_blank" rel="noopener">GenAI Ops with Langfuse</a></h3>
-        </div>
-
-        <div class="bento-card animate-on-scroll" data-category="workshops">
-          <time class="card-date">Sep 2024</time>
-          <div class="card-category">Data Analytics</div>
-          <h3><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/b157ba93-af71-43f5-8230-eff4a6b26719" target="_blank" rel="noopener">Better Together: Snowflake + AWS for Analytics and GenAI Workload</a></h3>
-        </div>
-
-        <div class="bento-card animate-on-scroll" data-category="workshops">
-          <time class="card-date">Jan 2025</time>
-          <div class="card-category">Data Analytics</div>
-          <h3><a href="https://catalog.workshops.aws/open-source-analytics-architecture" target="_blank" rel="noopener">Cost Effective Modern Data Platform with Athena, DBT, Iceberg, Strands SDK and MCP</a></h3>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Toolings -->
-    <div id="tools">
-      <h2 class="bento-section-title animate-on-scroll"><span class="dot" style="background:var(--color-tools)"></span>Internal Toolings & Demos</h2>
-      <div class="bento-grid no-featured">
-
-        <div class="bento-card animate-on-scroll" data-category="tools">
-          <time class="card-date">Apr 2025</time>
-          <div class="card-category">Contributor</div>
-          <h3><a href="https://gitlab.aws.dev/dolivoj/pizza-bot" target="_blank" rel="noopener" class="internal-link" title="Internal - requires AWS access">Pizza Bot</a></h3>
-          <div class="card-meta">AI-powered assistant that helps you complete common AWS tasks faster and more efficiently. Built on OpenAPI (REST) and Model Context Protocol (MCP) specifications.</div>
-        </div>
-
-        <div class="bento-card animate-on-scroll" data-category="tools">
-          <time class="card-date">Feb 2025</time>
-          <div class="card-category">Contributor</div>
-          <h3><a href="https://broadcast.amazon.com/videos/1416629" target="_blank" rel="noopener" class="internal-link" title="Internal - requires AWS access">Inferencing DeepSeek-R1-Distill-LLama-8B on Trainium2 and vLLM</a></h3>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="bento-footer">
-    <p>Built with passion for cloud &mdash; <a href="https://github.com/grhaonan/my-aws-journey" target="_blank" rel="noopener">View on GitHub</a></p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script>
-    // Dynamic stat counts - counts .bento-card elements in each section
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const sectionMap = {
-        'Published Blogs': '#blogs',
-        'Talks & Events': '#speaking',
-        'Case Studies': '#case-studies',
-        'Workshops': '#workshops',
-        'Customer Quotes': '#quotes',
-      };
-      document.querySelectorAll('.stat-card').forEach(card => {
-        const label = card.querySelector('.stat-label')?.textContent.trim();
-        const sectionId = sectionMap[label];
-        if (sectionId) {
-          const count = document.querySelectorAll(sectionId + ' .bento-card').length;
-          const numEl = card.querySelector('.stat-number');
-          if (numEl) numEl.setAttribute('data-target', count);
+        // --- Dynamic stat counts from actual cards in each section ---
+        const sectionMap = {
+            'Published Blogs': '#blogs',
+            'Talks & Events': '#speaking',
+            'Case Studies': '#case-studies',
+            'Workshops': '#workshops',
+            'Customer Quotes': '#quotes',
+        };
+        document.querySelectorAll('.stat-card').forEach(card => {
+            const label = card.querySelector('.stat-label')?.textContent.trim();
+            const sectionId = sectionMap[label];
+            if (sectionId) {
+                const count = document.querySelectorAll(sectionId + ' .card').length;
+                const numEl = card.querySelector('.stat-number');
+                if (numEl) numEl.setAttribute('data-target', count);
+            }
+        });
+
+        // --- Counter animation (ease-out cubic) ---
+        function animateCounter(el) {
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            if (isNaN(target) || target === 0) return;
+            const duration = 1500;
+            const start = performance.now();
+            function tick(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
         }
-      });
+
+        // Observe stat numbers and trigger count-up when visible
+        const counterObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !entry.target.dataset.counted) {
+                        entry.target.dataset.counted = 'true';
+                        animateCounter(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+        document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+            el.textContent = '0';
+            counterObserver.observe(el);
+        });
+
+        // --- Smooth scroll for nav links ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
     });
-  </script>
+    </script>
+
 </body>
 </html>
