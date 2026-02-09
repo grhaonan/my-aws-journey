@@ -2,6 +2,8 @@
 
 - 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions in 2025
 
+- 2026 AWSome All-Star (Q1)
+
 ## AWS Blogs/Prescriptive Guidance
 ### ML/Generative AI/Agentic AI:
 - [Democratizing business intelligence: BGL’s journey with Claude Agent SDK and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/democratizing-business-intelligence-bgls-journey-with-claude-agent-sdk-and-amazon-bedrock-agentcore/) first-author, Jan 2026 
