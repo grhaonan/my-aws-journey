@@ -75,6 +75,8 @@ As main author or co-author
 
 ### ML/Generative AI/Agentic AI:
 
+- [Anthropic on AWS](/images/anthropic_on_aws_workshop_2026.png) Feb, 2026
+
 - [Agentic AI with Claude Agent SDK and Amazon Bedrock AgentCore](https://catalog.us-east-1.prod.workshops.aws/workshops/2ab3895e-8b7c-4f5c-b0c7-8597d6954290) Jan, 2026
 
 - [Supercharge your development with Claude Code on Amazon Bedrock](https://catalog.workshops.aws/claude-code-on-amazon-bedrock) September, 2025
