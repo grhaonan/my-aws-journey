@@ -1,8 +1,8 @@
 ## Award 
 
-- 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions in 2025
+- 2025 AWS AI/ML Technicla Field Community(TFC) Gold Member: recognize my impactful contributions in 2025 (Award)
 
-- 2026 AWSome All-Star (Q1)
+- [2026 AWSome All-Star](/images/all-star-awards.png) (Award)
 
 ## AWS Blogs/Prescriptive Guidance
 ### ML/Generative AI/Agentic AI:
@@ -18,25 +18,27 @@
 
 ## Internal Deep Dives & Summit Speaking & Hackathon:
 
+### 2026 ANZ Agentic AI strategic AI-DLC GTM campaign 
+- AIDLC with Claude Code on Bedrock, internal enablemment for 130+ AWS Solution Architects, CAST 4.7 (Internal enablment)
 
-### 2025 OneANZ Agentic Hackathon
+### 2025 OneANZ Agentic Hackathon 
 
-- [Multi-agent powerd property buyer agency](/images/landchecker_hackathon_final.jpg) September, 2025
+- [Multi-agent powerd property buyer agency](/images/landchecker_hackathon_final.jpg) September, 2025 (Hackathon)
 
-### ML/Generative AI/Agentic AI:
+### ML/Generative AI/Agentic AI: 
 
-- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)  - AWS joint customer solution, Nov, 2024
+- [Video Q&A with Amazon Bedrock and Marqo AI](/images/video_qa_with_amazon_bedrock_and_marqo_ai.png)  - AWS joint customer solution, Nov, 2024 (Solution Deepdive)
 
-- [Observability for GenAI Applications with Amazon Bedrock and Langfuse](/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png) - AWS Global Technicla Field Community (TFC) Annual Summit, Seattle, WA, USA, April 2025
+- [Observability for GenAI Applications with Amazon Bedrock and Langfuse](/images/observability_for_GenAI_applications_with_bedrock_and_langfuse.png) - AWS Global Technicla Field Community (TFC) Annual Summit, Seattle, WA, USA, April 2025 (Summit Talk)
 
-- [AWS Tech Summit Sydney 2025 - GenAIOps with Langfuse](/images/genai_ops_aws_tech_summit_sydney.png) September, 2025
+- [AWS Tech Summit Sydney 2025 - GenAIOps with Langfuse](/images/genai_ops_aws_tech_summit_sydney.png) September, 2025 (Summit Workshop)
 
-- [AWS Sydney Summit 2025 - Scaling Generative AI in Production with Amazon Nova](/images/scaling_generative_ai_in_production_with_amazon_nova.png) - With customer inGenious AI, AWS Sydney Summit is the latest public event in the ANZ, June, 2025
+- [AWS Sydney Summit 2025 - Scaling Generative AI in Production with Amazon Nova](/images/scaling_generative_ai_in_production_with_amazon_nova.png) - With customer inGenious AI, AWS Sydney Summit is the latest public event in the ANZ, June, 2025 (Summit Customer Joint Talk)
 
 
 ### Data Analytics:
 
-- [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png), September, 2025
+- [AWS Tech Summit Sydney 2025 - Fugal Data Foundation for AI with Athena DBT and Iceberg](/images/frugal_data_foundation_for_ai_with_amazon_athena_iceberg_dbt​.png), September, 2025 (Summit Workshop)
 
 
 ## Customer Case Studies:
@@ -44,17 +46,17 @@ Based on the work with customers.
 
 ### ML/Generative AI/Agentic AI:
 
-- [WorkflowMax Intelligent Document Processing](/images/wfm_idp.png) August, 2025
+- [WorkflowMax Intelligent Document Processing](/images/wfm_idp.png) August, 2025 (Customer Case Studies)
 
-- [Ingenious AI Amazon Nova LLM Case Study](/images/ingenious_ai_nova_case_study.png) March, 2025
+- [Ingenious AI Amazon Nova LLM Case Study](/images/ingenious_ai_nova_case_study.png) March, 2025 (Customer Case Studies)
 
-- [CrystalDelta Amazon Nova LLM Case Study](/images/crystal_delta_nova_case_study.png) March, 2025
+- [CrystalDelta Amazon Nova LLM Case Study](/images/crystal_delta_nova_case_study.png) March, 2025 (Customer Case Studies)
 
-- [inGeniousAI reinvent 2025 Keynote Highlight](/images/ingenious_ai_nova.jpeg) December, 2025
+- [inGeniousAI reinvent 2025 Keynote Highlight](/images/ingenious_ai_nova.jpeg) December, 2025 (Customer Case Studies)
 
 ### Migration
 
-- [WorkflowMax AWS Migration Case Study](/images/wfm_migration_case_study.png) July, 2025
+- [WorkflowMax AWS Migration Case Study](/images/wfm_migration_case_study.png) July, 2025 (Customer Case Studies)
 
 
 ## Customer quotes on AWS Services
@@ -63,11 +65,11 @@ I worked closely with AWS customers to advocate for AWS services and solutions.
 
 ### ML/Generative AI/Agentic AI:
 
-- Customer Fortiro: [Unlock cost savings with the new scale down to zero feature in SageMaker Inference](https://aws.amazon.com/blogs/machine-learning/unlock-cost-savings-with-the-new-scale-down-to-zero-feature-in-amazon-sagemaker-inference/) December, 2024
+- Customer Fortiro: [Unlock cost savings with the new scale down to zero feature in SageMaker Inference](https://aws.amazon.com/blogs/machine-learning/unlock-cost-savings-with-the-new-scale-down-to-zero-feature-in-amazon-sagemaker-inference/) December, 2024 (Customer quotes)
 
-- Customer Landchecker: [Amazon Strands Agents SDK](/images/landchecker_strands_testimoni.png) Jan, 2026
+- Customer Landchecker: [Amazon Strands Agents SDK](/images/landchecker_strands_testimoni.png) Jan, 2026 (Customer quotes)
 
-- Customer TeamFomr: [Amazon Strands Agents SDK](/images/teamform_strands_testimoni.png) November, 2025
+- Customer TeamFomr: [Amazon Strands Agents SDK](/images/teamform_strands_testimoni.png) November, 2025 (Customer quotes)
 
 ## Hands-on Workshops Builder:
 As main author or co-author
@@ -75,27 +77,27 @@ As main author or co-author
 
 ### ML/Generative AI/Agentic AI:
 
-- [Anthropic on AWS](/images/anthropic_on_aws_workshop_2026.png) Feb, 2026
+- [Anthropic on AWS](/images/anthropic_on_aws_workshop_2026.png) Feb, 2026 (Hands-on Workshops Building)
 
-- [Agentic AI with Claude Agent SDK and Amazon Bedrock AgentCore](https://catalog.us-east-1.prod.workshops.aws/workshops/2ab3895e-8b7c-4f5c-b0c7-8597d6954290) Jan, 2026
+- [Agentic AI with Claude Agent SDK and Amazon Bedrock AgentCore](https://catalog.us-east-1.prod.workshops.aws/workshops/2ab3895e-8b7c-4f5c-b0c7-8597d6954290) Jan, 2026 (Hands-on Workshops Building)
 
-- [Supercharge your development with Claude Code on Amazon Bedrock](https://catalog.workshops.aws/claude-code-on-amazon-bedrock) September, 2025
+- [Supercharge your development with Claude Code on Amazon Bedrock](https://catalog.workshops.aws/claude-code-on-amazon-bedrock) September, 2025 (Hands-on Workshops Building)
 
-- [GenAI Ops with Langfuse](https://catalog.workshops.aws/genaiops-langfuse) Feb, 2025
+- [GenAI Ops with Langfuse](https://catalog.workshops.aws/genaiops-langfuse) Feb, 2025 (Hands-on Workshops Building)
 
 
 
 ### Data Analytics:
 
-- [Better together: Snowflake + AWS for Analytics and GenAI workload](https://catalog.us-east-1.prod.workshops.aws/workshops/b157ba93-af71-43f5-8230-eff4a6b26719) September, 2024
+- [Better together: Snowflake + AWS for Analytics and GenAI workload](https://catalog.us-east-1.prod.workshops.aws/workshops/b157ba93-af71-43f5-8230-eff4a6b26719) September, 2024 (Hands-on Workshops Building)
 
-- [Cost Effective Modern Data Platform With Athena, DBT, Iceberg, Strands SDK and MCP](https://catalog.workshops.aws/open-source-analytics-architecture) Jan, 2025
+- [Cost Effective Modern Data Platform With Athena, DBT, Iceberg, Strands SDK and MCP](https://catalog.workshops.aws/open-source-analytics-architecture) Jan, 2025 (Hands-on Workshops Building)
 
 
 ## Internal Toolings/Demos
 Contributor
 
-- [Pizza Bot](https://gitlab.aws.dev/dolivoj/pizza-bot) - Pizza Bot is AI-powered assistant that helps you complete common AWS tasks faster and more efficiently, Pizza Bot builds on the industry standard OpenAPI (REST) and Model Context Protocol (MCP) specifications to expose recipes that can be called directly or via an AI agent, April, 2025
+- [Pizza Bot](https://gitlab.aws.dev/dolivoj/pizza-bot) - Pizza Bot is AI-powered assistant that helps you complete common AWS tasks faster and more efficiently, Pizza Bot builds on the industry standard OpenAPI (REST) and Model Context Protocol (MCP) specifications to expose recipes that can be called directly or via an AI agent, April, 2025 (Internal Tooling Contribution)
 
-- [Inferencing DeepSeek-R1-Distill-LLama-8B on Trainum2 and vLLM](https://broadcast.amazon.com/videos/1416629) February, 2025
+- [Inferencing DeepSeek-R1-Distill-LLama-8B on Trainum2 and vLLM](https://broadcast.amazon.com/videos/1416629) February, 2025 (Internal Demo Building)
   
